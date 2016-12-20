@@ -8,6 +8,7 @@ import ru.levelp.dao.user.UserServiceMongo;
 import ru.levelp.entities.User;
 import ru.levelp.errors.RequestExecutionError;
 
+import java.util.List;
 import java.util.UUID;
 
 /**
@@ -52,4 +53,6 @@ public class UserController {
 
         throw new RequestExecutionError("REGISTRATION ERROR");
     }
+
+    public ResponseContainer<List<User>> getUsers ()
 }

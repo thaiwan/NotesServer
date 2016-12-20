@@ -5,7 +5,7 @@ package ru.levelp.api;
  */
 public class Method {
     public static final String AUTHORIZE = "authorize";
-    public static final String GET_NOTES = "getNotes";
     public static final String REGISTRATION = "registration";
     public static final String GET_USERS = "getUsers";
+    public static final String GET_NOTES = "getNotes";
 }
