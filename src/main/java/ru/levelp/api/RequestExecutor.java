@@ -8,6 +8,7 @@ import ru.levelp.api.entities.AuthPayload;
 import ru.levelp.api.entities.RegisterPayload;
 import ru.levelp.api.entities.RequestContainer;
 import ru.levelp.api.entities.ResponseContainer;
+import ru.levelp.dao.controllers.NoteController;
 import ru.levelp.dao.controllers.UserController;
 import ru.levelp.errors.RequestExecutionError;
 
@@ -19,6 +20,7 @@ public class RequestExecutor {
 
     private Gson gson;
     private UserController userController;
+    private NoteController noteController;
 
     @Autowired
     public RequestExecutor(Gson gson, UserController userController) {
@@ -49,8 +51,10 @@ public class RequestExecutor {
 
 
             case Method.GET_NOTES:
-                Re+
-                break;
+                return noteController.getNotes(userId);
+
+            case Method.GET_USERS:
+                return userController.getUsers();
 
 
         }

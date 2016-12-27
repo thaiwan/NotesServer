@@ -54,5 +54,7 @@ public class UserController {
         throw new RequestExecutionError("REGISTRATION ERROR");
     }
 
-    public ResponseContainer<List<User>> getUsers ()
+    public ResponseContainer<List<User>> getUsers() {
+        return new ResponseContainer<>(userService.getAll());
+    }
 }
